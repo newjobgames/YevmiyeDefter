@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://newjobgames.github.io/YevmiyeDefter/sitemap.xml
