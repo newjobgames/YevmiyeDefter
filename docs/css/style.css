@@ -1,0 +1,61 @@
+/* =====================================================
+   Yevmiye Takip - Kurumsal Global CSS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-main: #0f172a;
+  --primary-blue: #2563eb;
+  --primary-hover: #1d4ed8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: #f8fafc;
+}
+
+/* Özel İnce Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* Sayfa Kaydırma Animasyonları İçin */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Sayı Giriş Alanlarındaki Varsayılan Okları Temizleme */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
